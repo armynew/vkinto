@@ -18,7 +18,7 @@ kintohub
 
 ### 客户端配置
 
-客户端配置看图吧，不多讲：
+LOOK：
 
 ![v2ray](/img/kinto3.jpg)
 
