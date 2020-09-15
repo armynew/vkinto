@@ -8,11 +8,11 @@ ENV UUID=5c25aa6b-9a78-47b6-9dd0-394855a99b3a
 ENV PORT=8888
 
 ADD configure.sh /configure.sh
-RUN chmod +x /configure.sh
+#RUN chmod +x /configure.sh
 RUN bash /configure.sh
 
-FROM alpine
+#FROM alpine
 #CMD /configure.sh
-CMD /usr/local/bin/v2ray -config /usr/local/etc/v2ray/config.json
+#CMD /usr/local/bin/v2ray -config /usr/local/etc/v2ray/config.json
 
-#RUN echo "good lucky ,All cmd done !"
+RUN echo "good lucky ,All cmd done !"
