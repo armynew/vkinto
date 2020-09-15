@@ -10,5 +10,7 @@ ENV PORT=8888
 ADD configure.sh /configure.sh
 RUN chmod +x /configure.sh
 RUN bash /configure.sh
+
 #CMD /configure.sh
 
+RUN echo "good lucky ,All cmd done !"
