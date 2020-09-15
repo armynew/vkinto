@@ -25,6 +25,8 @@ RUN	install -m 755 /tmp/v2ray/v2ray /usr/local/bin/v2ray
 RUN	install -m 755 /tmp/v2ray/v2ctl /usr/local/bin/v2ctl
 RUN	rm -rf /tmp/v2ray
 RUN	install -d /usr/local/etc/v2ray
-  
-CMD nohup tor & \
-    /usr/local/bin/v2ray -config $CONFIG
+CMD /usr/local/bin/v2ray -config $CONFIG  
+
+
+#CMD nohup tor & \
+#    /usr/local/bin/v2ray -config $CONFIG
