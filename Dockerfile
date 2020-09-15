@@ -18,7 +18,7 @@ ENV CONFIG=https://raw.githubusercontent.com/armynew/vkinto/master/config.json
 FROM alpine
 RUN apk update && apk add --no-cache tor ca-certificates
 RUN mkdir /tmp/v2ray 
-RUN	curl -L -H "Cache-Control: no-cache" -o /tmp/v2ray/v2ray.zip https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip
+ENTRYPOINT	curl -L -H "Cache-Control: no-cache" -o /tmp/v2ray/v2ray.zip https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip
 RUN	unzip /tmp/v2ray/v2ray.zip -d /tmp/v2ray
 RUN	rm -rf /usr/local/bin/v2ray 
 RUN	rm -rf /usr/local/bin/v2ctl 
