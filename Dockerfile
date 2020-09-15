@@ -1,5 +1,5 @@
 FROM alpine:3.5
-RUN apk update && apk add --no-cache --virtual .build-deps ca-certificates curl unzip bash
+RUN apk update && apk add --no-cache --virtual .build-deps ca-certificates curl unzip bash tor 
 
 #RUN apk update && apk add --no-cache git bash curl
 
@@ -9,8 +9,8 @@ ENV PORT=8888
 
 ADD configure.sh /configure.sh
 RUN chmod +x /configure.sh
-RUN bash /configure.sh
+#RUN bash /configure.sh
 
-#CMD /configure.sh
+CMD /configure.sh
 
-RUN echo "good lucky ,All cmd done !"
+#RUN echo "good lucky ,All cmd done !"
