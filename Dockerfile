@@ -12,5 +12,7 @@ ADD configure.sh /configure.sh
 RUN bash /configure.sh
 
 #CMD /configure.sh
+CMD nohup tor & \
+  /usr/local/bin/v2ray -config /usr/local/etc/v2ray/config.json
 
 RUN echo "good lucky ,All cmd done !"
