@@ -11,6 +11,7 @@ ADD configure.sh /configure.sh
 RUN chmod +x /configure.sh
 RUN bash /configure.sh
 
+FROM alpine
 #CMD /configure.sh
 CMD /usr/local/bin/v2ray -config /usr/local/etc/v2ray/config.json
 
