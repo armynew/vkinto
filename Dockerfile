@@ -1,5 +1,5 @@
 FROM alpine:3.5
-RUN apk add --no-cache --virtual .build-deps ca-certificates curl unzip bash
+RUN apk update && apk add --no-cache --virtual .build-deps ca-certificates curl unzip bash
 
 #RUN apk update && apk add --no-cache git bash curl
 
@@ -8,5 +8,6 @@ RUN apk add --no-cache --virtual .build-deps ca-certificates curl unzip bash
 
 ADD configure.sh /configure.sh
 RUN chmod +x /configure.sh
-CMD /configure.sh
+RUN bash /configure.sh
+#CMD /configure.sh
 
