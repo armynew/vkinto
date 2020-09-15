@@ -4,7 +4,7 @@ RUN apk update && apk add --no-cache --virtual .build-deps ca-certificates curl 
 #RUN apk update && apk add --no-cache git bash curl
 
 
-
+ENV UUID=5c25aa6b-9a78-47b6-9dd0-394855a99b3a
 
 ADD configure.sh /configure.sh
 RUN chmod +x /configure.sh
