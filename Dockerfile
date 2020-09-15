@@ -6,7 +6,6 @@ RUN git clone --progress https://github.com/v2fly/v2ray-core.git . && \
 
 FROM alpine
 ENV CONFIG=https://raw.githubusercontent.com/armynew/vkinto/master/config.json
-ENV UUID=5c25aa6b-9a78-47b6-9dd0-394855a99b3a
 
 COPY --from=builder /tmp/v2ray.tgz /tmp
 RUN apk update && apk add --no-cache tor ca-certificates && \
